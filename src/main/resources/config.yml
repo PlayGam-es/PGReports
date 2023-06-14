@@ -1,0 +1,92 @@
+#
+#
+#
+#        Reports & Punishments - Premium plugin for PlayGames
+#            Check out PlayGames @ https://playgam.es/
+#             Join the discord @ discord.gg/playgames
+#                     Coded by Jay & Nicolas
+#
+#
+#
+
+Plugin:
+  Prefix:
+    Reports: '&8[&cReports&8]'
+    Punishments: '&8[&cPunishments&8]'
+  Database:
+    Type: 'H2'
+    Address: 'localhost'
+    Port: '3306'
+    Username: 'root'
+    Password: '********'
+    DatabaseName: 'db_pg_1'
+
+Messages:
+  Reports:
+    Player:
+      Report-Created: '&aReport for %target% has been sent to staff.'
+      Duplicate-Report: '&cReport for %target% already exists.'
+    Staff:
+      Report-Created: '&c%player% &fhas reported &c%target% &ffor &c%reason%.'
+      Report-Assigned: '&aYou are now handling a report against %current_active_report%'
+      Report-Clear: '&cYou have cleared reports for %current_active_report%'
+
+StaffMode:
+  Vanish: true
+  Spectator: true
+  TP-Back: true
+  Inventory:
+    '0':
+      Item: 'COMPASS'
+      DisplayName: '&bTP to %current_active_report%.'
+      Slot: 0
+      Lore:
+        - ''
+        - ''
+        - ''
+        - ''
+      Glowing: true
+      Commands:
+        - 'tp %player%'
+    '1':
+      Item: 'NETHER_STAR'
+      DisplayName: '&cPunish %current_active_report%.'
+      Slot: 4
+      Lore:
+        - ''
+        - ''
+        - ''
+        - ''
+      Glowing: true
+      Commands:
+        - 'punish %current_active_report%'
+    '2':
+      Item: 'BEACON'
+      DisplayName: '&aClear Reports For %current_active_report%.'
+      Slot: 8
+      Lore:
+        - ''
+        - ''
+        - ''
+        - ''
+      Glowing: true
+      Commands:
+        - 'report clear %current_active_report%'
+    '3':
+      Item: 'ICE'
+      DisplayName: '&bFreeze %current_active_report%.'
+      Slot: 3
+      Lore:
+        - ''
+        - ''
+        - ''
+        - ''
+      Glowing: true
+      Commands:
+        - 'freeze %current_active_player%'
+
+
+Errors:
+  NoPlayer: '&cNo Player Found.'
+  NoPermission: '&cNo Permission.'
+  InvalidArguments: '&cNo such command. try /reports help.'
