@@ -1,0 +1,6 @@
+name: PGReports
+version: '${project.version}'
+main: dev.jay.pgreports.PGReports
+api-version: 1.19
+authors: [ jay, qwml, shortaholic, nicolas ]
+description: PlayGames Report & Punishment System.
