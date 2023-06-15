@@ -61,7 +61,7 @@ public class reportsGUI extends PaginatedMenu {
 
     @Override
     public void setMenuItems() {
-        
+
         String warnItemConfig = plugin.getConfig().getString("PunishmentGUI.Items.warnItem");
         String warnItemConfigDisplay = plugin.getConfig().getString("PunishmentGUI.Items.WarnItem.displayname");
         List<String> warnItemLore = plugin.getConfig().getStringList("PunishmentGUI.Items.WarnItem.Lore");
