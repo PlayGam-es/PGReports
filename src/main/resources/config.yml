@@ -86,6 +86,7 @@ StaffMode:
         - 'freeze %current_active_player%'
 
 
+
 Errors:
   NoPlayer: '&cNo Player Found.'
   NoPermission: '&cNo Permission.'
