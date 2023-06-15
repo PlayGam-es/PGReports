@@ -27,7 +27,7 @@ public class dbq {
     }
 
     public void reportPlayer(Player player, Player target, String reason) throws SQLException {
-        if (!doesReportExist(target)){
+        if (!doesReportExist(player, target)){
             PreparedStatement createPlayer = plugin.con.GetDb().prepareStatement("INSERT INTO reports(reporterName,reportedName,reason) VALUES (?,?,?)");
             createPlayer.setString(1, player.getName());
             createPlayer.setString(2, target.getName());
@@ -37,11 +37,12 @@ public class dbq {
     }
 
 
-    public boolean doesReportExist(Player player) throws SQLException{
+    public boolean doesReportExist(Player player, Player target) throws SQLException{
         PreparedStatement ps1 = plugin.con.GetDb().prepareStatement("SELECT reportedName FROM reports WHERE reportedName=?");
-        ps1.setString(1, player.getName());
+        ps1.setString(1, target.getName());
         ResultSet rs1 = ps1.executeQuery();
         if (rs1.next()){
+            player.sendMessage("Hey, a report already exists for this player...");
             return true;
         }else{
             return false;
