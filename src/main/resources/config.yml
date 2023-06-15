@@ -1,8 +1,8 @@
 #
 #
 #
-#        Reports & Punishments - Premium plugin for PlayGames
-#            Check out PlayGames @ https://playgam.es/
+#        Reports & Punishments - Premium plugin for Play Games
+#            Check out Play Games @ https://play-gam.es/
 #             Join the discord @ discord.gg/playgames
 #                     Coded by Jay & Nicolas
 #
@@ -11,8 +11,8 @@
 
 Plugin:
   Prefix:
-    Reports: '&8[&cReports&8]'
-    Punishments: '&8[&cPunishments&8]'
+    Reports: '&#FB7800&lReports &8➟'
+    Punishments: '&#FB1515&lPunishments &8➟'
   Database:
     Type: 'H2'
     Address: 'localhost'
@@ -24,12 +24,12 @@ Plugin:
 Messages:
   Reports:
     Player:
-      Report-Created: '&aReport for %target% has been sent to staff.'
-      Duplicate-Report: '&cReport for %target% already exists.'
+      Report-Created: '&#22F100You have reported &f%target% &#22F100and it was sent to staff.'
+      Duplicate-Report: '&#FF1B1BReport for &f%target% &#FF1B1Balready exists.'
     Staff:
-      Report-Created: '&c%player% &fhas reported &c%target% &ffor &c%reason%.'
-      Report-Assigned: '&aYou are now handling a report against %current_active_report%'
-      Report-Clear: '&cYou have cleared reports for %current_active_report%'
+      Report-Created: '&f%player% &#FF1B1Bhas reported &f%target% &#FF1B1Bfor &f%reason%.'
+      Report-Assigned: '&#22F100You are now handling a report against &f%current_active_report%'
+      Report-Clear: '&#FF1B1BYou have cleared reports for &f%current_active_report%'
 
 StaffMode:
   Vanish: true
@@ -37,32 +37,30 @@ StaffMode:
   TP-Back: true
   Inventory:
     '0':
-      Item: 'COMPASS'
-      DisplayName: '&bTP to %current_active_report%.'
+      Item: 'ENDER_PEARL'
+      DisplayName: '&#1BBAFF&lTeleport To: &f&n%current_active_report%.'
       Slot: 0
       Lore:
+        - '&7By using this item you will teleport to the player!'
         - ''
-        - ''
-        - ''
-        - ''
+        - '&eRight-Click to Use!'
       Glowing: true
       Commands:
         - 'tp %player%'
     '1':
       Item: 'NETHER_STAR'
-      DisplayName: '&cPunish %current_active_report%.'
+      DisplayName: '&#FB1515&lPunish: &f&n%current_active_report%.'
       Slot: 4
       Lore:
+        - '&7By using this item you will teleport to the player!'
         - ''
-        - ''
-        - ''
-        - ''
+        - '&eRight-Click to Use!'
       Glowing: true
       Commands:
         - 'punish %current_active_report%'
     '2':
       Item: 'BEACON'
-      DisplayName: '&aClear Reports For %current_active_report%.'
+      DisplayName: '&#22F100&lClear Reports: &f&n%current_active_report%.'
       Slot: 8
       Lore:
         - ''
@@ -74,7 +72,7 @@ StaffMode:
         - 'report clear %current_active_report%'
     '3':
       Item: 'ICE'
-      DisplayName: '&bFreeze %current_active_report%.'
+      DisplayName: '&#13E3FF&lFreeze: &f&n%current_active_report%.'
       Slot: 3
       Lore:
         - ''
