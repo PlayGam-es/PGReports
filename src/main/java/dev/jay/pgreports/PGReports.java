@@ -13,7 +13,7 @@ public final class PGReports extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Datatype = getConfig().getString("Plugin.Database.Type");#
+        Datatype = getConfig().getString("Plugin.Database.Type");
         con = new db(this);
         query = new dbq(this);
 
